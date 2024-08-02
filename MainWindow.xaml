@@ -1,0 +1,449 @@
+﻿<Window x:Class="CookBook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CookBook"
+        mc:Ignorable="d"
+        Title="Cookz" 
+        Height="600" 
+        Width="1000" 
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown">
+
+    <Window.Resources>
+        <local:BooleanToVisibilityConverter x:Key="MyBooleanToVisibilityConverter"/>
+    </Window.Resources>
+
+    <Grid Background="#FAF9F6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Navigation Panel -->
+        <StackPanel Orientation="Vertical" 
+                    Background="#EEF7FF" 
+                    VerticalAlignment="Stretch" 
+                    HorizontalAlignment="Left"
+                    Width="250"
+                    Grid.Column="0">
+
+            <!-- Logo Image -->
+            <Border CornerRadius="10">
+
+                <Border CornerRadius="10"
+                        Margin="0,10,0,0">
+                    <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Cooking_Logo.png"
+                           Width="220"
+                           VerticalAlignment="Center"/>
+                </Border>
+
+            </Border>
+
+            <!-- Search Box -->
+            <Border CornerRadius="10" 
+                    Margin="10" 
+                    Height="35"
+                    Width="225"
+                    Background="White" 
+                    BorderBrush="Gray" 
+                    BorderThickness="1">
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Search Icon -->
+                    <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Search_Icon.png" 
+                           Width="25" 
+                           Height="25" 
+                           VerticalAlignment="Center" 
+                           Margin="10,0" 
+                           Grid.Column="0"/>
+
+                    <!-- TextBox for input -->
+                    <TextBox x:Name="SearchTextBox" 
+                             Grid.Column="1"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Stretch"
+                             Margin="10,0,10,0"
+                             Height="25"
+                             BorderThickness="0"
+                             TextChanged="SearchTextBox_TextChanged"
+                             Background="Transparent"/>
+
+                    <TextBlock Text="Search" 
+                               Grid.Column="1"
+                               Foreground="Gray" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Left"
+                               Margin="20,0,0,0"
+                               IsHitTestVisible="False"
+                               Visibility="{Binding ElementName=SearchTextBox, Path=Text.Length, Converter={StaticResource MyBooleanToVisibilityConverter}}"/>
+                </Grid>
+            </Border>
+
+            <TextBlock Text="DISCOVER" 
+                       FontSize="16" 
+                       FontWeight="Bold" 
+                       Foreground="#555555" 
+                       Margin="25,20,20,0"/>
+
+            <StackPanel Margin="30,5,20,20">
+
+                    <Button Name="HomeButton" 
+                        Content="Home" 
+                        FontSize="16" 
+                        Margin="0,10"
+                        Click="HomeButton_Click"
+                        BorderThickness="0"
+                        Background="Transparent">
+
+                    <Button.Template>
+                        
+                        <ControlTemplate TargetType="Button">
+
+                            <Border Name="border" 
+                                    Background="{TemplateBinding Background}" 
+                                    CornerRadius="10" 
+                                    BorderThickness="0">
+                                
+                                <ContentPresenter HorizontalAlignment="Left" 
+                                                  VerticalAlignment="Center"
+                                                  Margin="10,0,0,0"/>
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" 
+                                         Value="True">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="LightGray"/>
+                                </Trigger>
+
+                                <Trigger Property="IsPressed" 
+                                         Value="True">
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="Gray"/>
+                                </Trigger>
+
+                                <Trigger Property="IsEnabled" 
+                                         Value="False">
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="LightGray"/>
+                                    <Setter Property="Foreground" 
+                                            Value="DarkGray"/>
+
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button Name="BrowserButton" 
+                        Content="Browser" 
+                        FontSize="16" 
+                        Margin="0,0"
+                        Click="BrowserButton_Click"
+                        BorderThickness="0"
+                        Background="Transparent">   
+
+                    <Button.Template>
+                        
+                        <ControlTemplate TargetType="Button">
+
+                            <Border Name="border" 
+                                    Background="{TemplateBinding Background}" 
+                                    CornerRadius="10" 
+                                    BorderThickness="0">
+
+                                <ContentPresenter HorizontalAlignment="Left" 
+                                                  VerticalAlignment="Center"
+                                                  Margin="10,0,0,0"/>
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                
+                                <Trigger Property="IsMouseOver" 
+                                         Value="True">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="LightGray"/>
+                                </Trigger>
+
+                                <Trigger Property="IsPressed" 
+                                         Value="True">
+                                    
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="Gray"/>
+                                </Trigger>
+
+                                <Trigger Property="IsEnabled" 
+                                         Value="False">
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="LightGray"/>
+                                    
+                                    <Setter Property="Foreground" 
+                                            Value="DarkGray"/>
+
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button Name="ForYouButton" 
+                        Content="For You" 
+                        FontSize="16" 
+                        Margin="0,10"
+                        Click="ForYouButton_Click"
+                        BorderThickness="0"
+                        Background="Transparent">
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+
+                            <Border Name="border" 
+                                    Background="{TemplateBinding Background}" 
+                                    CornerRadius="10" 
+                                    BorderThickness="0">
+                                
+                                <ContentPresenter HorizontalAlignment="Left" 
+                                                  VerticalAlignment="Center"
+                                                  Margin="10,0,0,0"/>
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                
+                                <Trigger Property="IsMouseOver" 
+                                         Value="True">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="LightGray"/>
+                                </Trigger>
+
+                                <Trigger Property="IsPressed" 
+                                         Value="True">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="Gray"/>
+                                </Trigger>
+
+                                <Trigger Property="IsEnabled" 
+                                         Value="False">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="LightGray"/>
+                                    <Setter Property="Foreground" 
+                                            Value="DarkGray"/>
+ 
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+
+            <TextBlock Text="LIBRARY" 
+                       FontSize="16" 
+                       FontWeight="Bold" 
+                       Foreground="#555555" 
+                       Margin="25,0,20,0"/>
+
+            <StackPanel Margin="30,0,20,20">
+
+                <Button Name="ChefButton" 
+                        Content="Chef" 
+                        FontSize="16" 
+                        Margin="0,10"
+                        Click="HomeButton_Click"
+                        BorderThickness="0"
+                        Background="Transparent">
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+
+                            <Border Name="border" 
+                                    Background="{TemplateBinding Background}" 
+                                    CornerRadius="10" 
+                                    BorderThickness="0">
+
+                                <ContentPresenter HorizontalAlignment="Left" 
+                                                  VerticalAlignment="Center"
+                                                  Margin="10,0,0,0"/>
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" 
+                                         Value="True">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="LightGray"/>
+                                </Trigger>
+
+                                <Trigger Property="IsPressed" 
+                                         Value="True">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="Gray"/>
+                                </Trigger>
+
+                                <Trigger Property="IsEnabled" 
+                                         Value="False">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="LightGray"/>
+                                    
+                                    <Setter Property="Foreground" 
+                                            Value="DarkGray"/>
+
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button Name="FavouritesButton" 
+                        Content="Favourites" 
+                        FontSize="16" 
+                        Margin="0,0"
+                        Click="HomeButton_Click"
+                        BorderThickness="0"
+                        Background="Transparent">
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+
+                            <Border Name="border" 
+                                    Background="{TemplateBinding Background}" 
+                                    CornerRadius="10" 
+                                    BorderThickness="0">
+
+                                <ContentPresenter HorizontalAlignment="Left" 
+                                                  VerticalAlignment="Center"
+                                                  Margin="10,0,0,0"/>
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" 
+                                         Value="True">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="LightGray"/>
+                                </Trigger>
+
+                                <Trigger Property="IsPressed" 
+                                         Value="True">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="Gray"/>
+                                </Trigger>
+
+                                <Trigger Property="IsEnabled" 
+                                         Value="False">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="LightGray"/>
+                                    
+                                    <Setter Property="Foreground" 
+                                            Value="DarkGray"/>
+
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button Name="AboutUsButton" 
+                        Content="About Us" 
+                        FontSize="16" 
+                        Margin="0,10"
+                        Click="HomeButton_Click"
+                        BorderThickness="0"
+                        Background="Transparent">
+
+                    <Button.Template>
+                        
+                        <ControlTemplate TargetType="Button">
+
+                            <Border Name="border" 
+                                    Background="{TemplateBinding Background}" 
+                                    CornerRadius="10" 
+                                    BorderThickness="0">
+
+                                <ContentPresenter HorizontalAlignment="Left" 
+                                                  VerticalAlignment="Center"
+                                                  Margin="10,0,0,0"/>
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" 
+                                         Value="True">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="LightGray"/>
+                                </Trigger>
+
+                                <Trigger Property="IsPressed" 
+                                         Value="True">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="Gray"/>
+                                </Trigger>
+
+                                <Trigger Property="IsEnabled" 
+                                         Value="False">
+
+                                    <Setter TargetName="border" 
+                                            Property="Background" 
+                                            Value="LightGray"/>
+                                    
+                                    <Setter Property="Foreground" 
+                                            Value="DarkGray"/>
+
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Content area for dynamic content -->
+        <ContentControl x:Name="ContentArea" Grid.Column="1"/>
+
+        <!--StackPanel Orientation="Vertical" 
+                    Background="#FFFFFF" 
+                    VerticalAlignment="Stretch" 
+                    HorizontalAlignment="Right"
+                    Width="750"
+                    Grid.Column="1">
+
+            <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Cooking_Logo.png"/>
+
+        </StackPanel-->
+        
+    </Grid>
+
+</Window>

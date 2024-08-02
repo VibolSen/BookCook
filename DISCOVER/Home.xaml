@@ -1,0 +1,242 @@
+﻿<UserControl x:Class="CookBook.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Height="600"
+             Width="750">
+
+    <Grid Name="ContentArea">
+        <!-- Define RowDefinitions if needed -->
+        <!-- <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions> -->
+
+        <StackPanel VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Margin="0">
+
+            <StackPanel Orientation="Vertical" 
+                        Margin="10">
+
+                <!--StackPanel Orientation="Horizontal" 
+                            HorizontalAlignment="Right" 
+                            Margin="0,0,0,10">
+
+                    <TextBlock Text="Michelle Fenty" 
+                               FontSize="14" 
+                               Foreground="#555555" 
+                               VerticalAlignment="Center" 
+                               Margin="0,0,10,0"/>
+
+                    <Ellipse Width="30" 
+                             Height="30" 
+                             Fill="#CCCCCC"/>
+                </StackPanel-->
+
+                <!-- Featured Recipes -->
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" 
+                              VerticalScrollBarVisibility="Disabled" 
+                              Height="200"> 
+                    
+                    <StackPanel Orientation="Horizontal" 
+                                HorizontalAlignment="Stretch">
+
+                        <Border Background="#FFF0F0" 
+                                CornerRadius="10" 
+                                Margin="5" 
+                                Width="200">
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="Camodia Recipe" 
+                                           FontSize="16" 
+                                           FontWeight="Bold" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10" 
+                                           Grid.Row="0"/>
+
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\KHmer_Food_logo.jpg" 
+                                       Width="100" 
+                                       Height="100" 
+                                       Margin="10" 
+                                       Grid.Row="1"/>
+                            </Grid>
+                        </Border>
+
+
+                        <Border Background="#FFE6B3" 
+                                CornerRadius="10" 
+                                Margin="5" 
+                                Width="200">
+
+                            <TextBlock Text="Making sushi at home" 
+                                       FontSize="16" 
+                                       FontWeight="Bold" 
+                                       TextWrapping="Wrap" 
+                                       Margin="10"/>
+                        </Border>
+
+                        <Border Background="#B3E6FF" 
+                                CornerRadius="10" 
+                                Margin="5" 
+                                Width="200">
+
+                            <TextBlock Text="Super Taco for whole family" 
+                                       FontSize="16" 
+                                       FontWeight="Bold" 
+                                       TextWrapping="Wrap" 
+                                       Margin="10"/>
+                        </Border>
+
+                        <Border Background="#FFB3E6" 
+                                CornerRadius="10" 
+                                Margin="5" 
+                                Width="200">
+
+                            <TextBlock Text="Summer is on. Be ready" 
+                                       FontSize="16" 
+                                       FontWeight="Bold" 
+                                       TextWrapping="Wrap" 
+                                       Margin="10"/>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+
+
+                <!-- Daily Best Recipes -->
+                <TextBlock Text="Daily best recipes" 
+                           FontSize="24" 
+                           FontWeight="Bold" 
+                           Margin="10,20,10,10"/>
+
+                <WrapPanel HorizontalAlignment="Stretch">
+                    <Border Background="#FFFFFF" 
+                            CornerRadius="10" 
+                            Margin="5" 
+                            Width="150" 
+                            Height="150">
+
+                        <StackPanel>
+                            <Ellipse Width="100" 
+                                     Height="100" 
+                                     Fill="#FFCCCC" 
+                                     Margin="10"/>
+
+                            <TextBlock Text="Spaghetti with tomato sauce" 
+                                       FontSize="14" 
+                                       TextWrapping="Wrap" 
+                                       Margin="10"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#FFFFFF" 
+                            CornerRadius="10" 
+                            Margin="5" 
+                            Width="150" 
+                            Height="150">
+
+                        <StackPanel>
+                            <Ellipse Width="100" 
+                                     Height="100" 
+                                     Fill="#E6FFCC" 
+                                     Margin="10"/>
+
+                            <TextBlock Text="Salad with rice and kimchi" 
+                                       FontSize="14" 
+                                       TextWrapping="Wrap" 
+                                       Margin="10"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#FFFFFF" 
+                            CornerRadius="10" 
+                            Margin="5" 
+                            Width="150" 
+                            Height="150">
+
+                        <StackPanel>
+                            <Ellipse Width="100" 
+                                     Height="100" 
+                                     Fill="#FFCCE6" 
+                                     Margin="10"/>
+
+                            <TextBlock Text="Pancake with raspberry sauce" 
+                                       FontSize="14" 
+                                       TextWrapping="Wrap" 
+                                       Margin="10"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#FFFFFF" 
+                            CornerRadius="10" 
+                            Margin="5" 
+                            Width="150" 
+                            Height="150">
+
+                        <StackPanel>
+                            <Ellipse Width="100" 
+                                     Height="100" 
+                                     Fill="#CCFFE6" 
+                                     Margin="10"/>
+
+                            <TextBlock Text="Rice with shrimps and green peas" 
+                                       FontSize="14" 
+                                       TextWrapping="Wrap" 
+                                       Margin="10"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#FFFFFF" 
+                            CornerRadius="10" 
+                            Margin="5" 
+                            Width="150" 
+                            Height="150">
+
+                        <StackPanel>
+                            <Ellipse Width="100" 
+                                     Height="100" 
+                                     Fill="#FFE6CC" 
+                                     Margin="10"/>
+
+                            <TextBlock Text="Curry with chicken and onion" 
+                                       FontSize="14" 
+                                       TextWrapping="Wrap" 
+                                       Margin="10"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#FFFFFF" 
+                            CornerRadius="10" 
+                            Margin="5" 
+                            Width="150" 
+                            Height="150">
+
+                        <StackPanel>
+                            <Ellipse Width="100" 
+                                     Height="100" 
+                                     Fill="#CCFFE6" 
+                                     Margin="10"/>
+
+                            <TextBlock Text="Spicy lentil cream soup" 
+                                       FontSize="14" 
+                                       TextWrapping="Wrap" 
+                                       Margin="10"/>
+                        </StackPanel>
+                    </Border>
+
+                </WrapPanel>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>
