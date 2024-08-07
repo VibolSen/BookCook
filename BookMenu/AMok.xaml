@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="AMok" 
         Height="600" 
-        Width="1015">
+        Width="1015"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
 
     <Grid>
 

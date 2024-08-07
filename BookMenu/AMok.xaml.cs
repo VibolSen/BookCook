@@ -22,15 +22,14 @@ namespace CookBook.BookMenu
     {
         public AMok()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            // Navigate directly to the home page (MainPage)
-            Home homeWindow = new Home();
-            //homeWindow.Show();
+            // Close the current window
             this.Close();
         }
+
     }
 }

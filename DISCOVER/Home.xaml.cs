@@ -37,5 +37,6 @@ namespace CookBook
             AMok amokWindow = new AMok();
             amokWindow.Show();
         }
+
     }
 }
