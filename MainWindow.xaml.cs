@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using BookCook;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -11,7 +12,7 @@ namespace CookBook
         public MainWindow()
         {
             InitializeComponent();
-            ContentArea.Content = new Home();
+            ContentArea.Content = new Banner();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

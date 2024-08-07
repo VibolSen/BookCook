@@ -17,7 +17,7 @@ namespace BookCook
     /// <summary>
     /// Interaction logic for Banner.xaml
     /// </summary>
-    public partial class Banner : Window
+    public partial class Banner : UserControl
     {
         public Banner()
         {

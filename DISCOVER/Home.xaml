@@ -4,239 +4,481 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Height="600"
+             Height="580"
              Width="750">
 
     <Grid Name="ContentArea">
-        <!-- Define RowDefinitions if needed -->
-        <!-- <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions> -->
-
         <StackPanel VerticalAlignment="Center" 
-                    HorizontalAlignment="Center" 
+                    HorizontalAlignment="Center"
                     Margin="0">
-
             <StackPanel Orientation="Vertical" 
-                        Margin="10">
-
-                <!--StackPanel Orientation="Horizontal" 
-                            HorizontalAlignment="Right" 
-                            Margin="0,0,0,10">
-
-                    <TextBlock Text="Michelle Fenty" 
-                               FontSize="14" 
-                               Foreground="#555555" 
-                               VerticalAlignment="Center" 
-                               Margin="0,0,10,0"/>
-
-                    <Ellipse Width="30" 
-                             Height="30" 
-                             Fill="#CCCCCC"/>
-                </StackPanel-->
-
-                <!-- Featured Recipes -->
+                        Margin="0"
+                        Height="580"
+                        Width="750">
+                <!-- Featured Recipes Section -->
                 <ScrollViewer HorizontalScrollBarVisibility="Auto" 
                               VerticalScrollBarVisibility="Disabled" 
-                              Height="200"> 
-                    
+                              Height="200"
+                              Margin="0"
+                              PanningMode="HorizontalOnly">
                     <StackPanel Orientation="Horizontal" 
                                 HorizontalAlignment="Stretch">
-
+                        <!-- Cambodian Recipe -->
                         <Border Background="#FFF0F0" 
                                 CornerRadius="10" 
                                 Margin="5" 
                                 Width="200">
-
                             <Grid>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
                                     <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
-
-                                <TextBlock Text="Camodia Recipe" 
-                                           FontSize="16" 
-                                           FontWeight="Bold" 
-                                           TextWrapping="Wrap" 
-                                           Margin="10" 
-                                           Grid.Row="0"/>
-
-                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\KHmer_Food_logo.jpg" 
-                                       Width="100" 
-                                       Height="100" 
-                                       Margin="10" 
-                                       Grid.Row="1"/>
+                                <TextBlock Text="Cambodia Recipe" FontSize="18" FontWeight="Bold" TextWrapping="Wrap" Margin="20" Grid.Row="0"/>
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\KhmerFood.png" Height="110" Margin="0" VerticalAlignment="Bottom" Grid.Row="1"/>
                             </Grid>
                         </Border>
 
-
+                        <!-- Korean Recipe -->
                         <Border Background="#FFE6B3" 
                                 CornerRadius="10" 
                                 Margin="5" 
                                 Width="200">
-
-                            <TextBlock Text="Making sushi at home" 
-                                       FontSize="16" 
-                                       FontWeight="Bold" 
-                                       TextWrapping="Wrap" 
-                                       Margin="10"/>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="Korean Recipe" FontSize="18" FontWeight="Bold" TextWrapping="Wrap" Margin="20" Grid.Row="0"/>
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\KoreanFood.png" Height="110" Margin="0" VerticalAlignment="Bottom" Grid.Row="1"/>
+                            </Grid>
                         </Border>
 
+                        <!-- Thai Recipe -->
                         <Border Background="#B3E6FF" 
                                 CornerRadius="10" 
                                 Margin="5" 
                                 Width="200">
-
-                            <TextBlock Text="Super Taco for whole family" 
-                                       FontSize="16" 
-                                       FontWeight="Bold" 
-                                       TextWrapping="Wrap" 
-                                       Margin="10"/>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="Thai Recipe" FontSize="18" FontWeight="Bold" TextWrapping="Wrap" Margin="20" Grid.Row="0"/>
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\ThaiFood.png" Height="110" Margin="0" VerticalAlignment="Bottom" Grid.Row="1"/>
+                            </Grid>
                         </Border>
 
+                        <!-- Vietnamese Recipe -->
                         <Border Background="#FFB3E6" 
                                 CornerRadius="10" 
                                 Margin="5" 
                                 Width="200">
-
-                            <TextBlock Text="Summer is on. Be ready" 
-                                       FontSize="16" 
-                                       FontWeight="Bold" 
-                                       TextWrapping="Wrap" 
-                                       Margin="10"/>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="Vietnam Recipe" FontSize="18" FontWeight="Bold" TextWrapping="Wrap" Margin="20" Grid.Row="0"/>
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\KhmerFood.png" Height="110" Margin="0" VerticalAlignment="Bottom" Grid.Row="1"/>
+                            </Grid>
                         </Border>
                     </StackPanel>
                 </ScrollViewer>
 
-
-                <!-- Daily Best Recipes -->
-                <TextBlock Text="Daily best recipes" 
+                <!-- Daily Best Recipes Section -->
+                <TextBlock Text="Daily Best Recipes" 
                            FontSize="24" 
                            FontWeight="Bold" 
-                           Margin="10,20,10,10"/>
+                           Margin="10,5,10,5"/>
 
-                <WrapPanel HorizontalAlignment="Stretch">
-                    <Border Background="#FFFFFF" 
-                            CornerRadius="10" 
-                            Margin="5" 
-                            Width="150" 
-                            Height="150">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" 
+                              VerticalScrollBarVisibility="Auto" 
+                              Height="340"
+                              Width="750"
+                              Margin="0" 
+                              PanningMode="VerticalOnly">
 
-                        <StackPanel>
-                            <Ellipse Width="100" 
-                                     Height="100" 
-                                     Fill="#FFCCCC" 
-                                     Margin="10"/>
+                    <Grid HorizontalAlignment="Center" 
+                          VerticalAlignment="Top" 
+                          Width="750">
 
-                            <TextBlock Text="Spaghetti with tomato sauce" 
-                                       FontSize="14" 
-                                       TextWrapping="Wrap" 
-                                       Margin="10"/>
-                        </StackPanel>
-                    </Border>
+                        <!-- Define 3 rows and 4 columns -->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <Border Background="#FFFFFF" 
-                            CornerRadius="10" 
-                            Margin="5" 
-                            Width="150" 
-                            Height="150">
+                        <!-- Place items in the grid -->
+                        <Button Width="170" 
+                                Height="230" 
+                                Margin="10" 
+                                Background="Transparent" 
+                                BorderBrush="Transparent"
+                                Click="AMok">
+                            
+                            <Border CornerRadius="10" 
+                                    Background="White" 
+                                    Padding="10">
+                                
+                                <StackPanel HorizontalAlignment="Center">
+                                    <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                           Width="150" 
+                                           Height="150" 
+                                           Margin="0,0,0,5"/>
+                                    <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                    <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                                </StackPanel>
+                            </Border>
+                        </Button>
 
-                        <StackPanel>
-                            <Ellipse Width="100" 
-                                     Height="100" 
-                                     Fill="#E6FFCC" 
-                                     Margin="10"/>
 
-                            <TextBlock Text="Salad with rice and kimchi" 
-                                       FontSize="14" 
-                                       TextWrapping="Wrap" 
-                                       Margin="10"/>
-                        </StackPanel>
-                    </Border>
+                        <Border Grid.Row="0" Grid.Column="1" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                    <Border Background="#FFFFFF" 
-                            CornerRadius="10" 
-                            Margin="5" 
-                            Width="150" 
-                            Height="150">
+                        <Border Grid.Row="0" Grid.Column="2" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                        <StackPanel>
-                            <Ellipse Width="100" 
-                                     Height="100" 
-                                     Fill="#FFCCE6" 
-                                     Margin="10"/>
+                        <Border Grid.Row="0" Grid.Column="3" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                            <TextBlock Text="Pancake with raspberry sauce" 
-                                       FontSize="14" 
-                                       TextWrapping="Wrap" 
-                                       Margin="10"/>
-                        </StackPanel>
-                    </Border>
+                        <Border Grid.Row="1" Grid.Column="0" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                    <Border Background="#FFFFFF" 
-                            CornerRadius="10" 
-                            Margin="5" 
-                            Width="150" 
-                            Height="150">
+                        <Border Grid.Row="1" Grid.Column="1" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                        <StackPanel>
-                            <Ellipse Width="100" 
-                                     Height="100" 
-                                     Fill="#CCFFE6" 
-                                     Margin="10"/>
+                        <Border Grid.Row="1" Grid.Column="2" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                            <TextBlock Text="Rice with shrimps and green peas" 
-                                       FontSize="14" 
-                                       TextWrapping="Wrap" 
-                                       Margin="10"/>
-                        </StackPanel>
-                    </Border>
+                        <Border Grid.Row="1" Grid.Column="3" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                    <Border Background="#FFFFFF" 
-                            CornerRadius="10" 
-                            Margin="5" 
-                            Width="150" 
-                            Height="150">
+                        <Border Grid.Row="2" Grid.Column="0" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                        <StackPanel>
-                            <Ellipse Width="100" 
-                                     Height="100" 
-                                     Fill="#FFE6CC" 
-                                     Margin="10"/>
+                        <Border Grid.Row="2" Grid.Column="1" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                            <TextBlock Text="Curry with chicken and onion" 
-                                       FontSize="14" 
-                                       TextWrapping="Wrap" 
-                                       Margin="10"/>
-                        </StackPanel>
-                    </Border>
+                        <Border Grid.Row="2" Grid.Column="2" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                    <Border Background="#FFFFFF" 
-                            CornerRadius="10" 
-                            Margin="5" 
-                            Width="150" 
-                            Height="150">
+                        <Border Grid.Row="2" Grid.Column="3" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                        <StackPanel>
-                            <Ellipse Width="100" 
-                                     Height="100" 
-                                     Fill="#CCFFE6" 
-                                     Margin="10"/>
+                        <Border Grid.Row="3" Grid.Column="0" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                            <TextBlock Text="Spicy lentil cream soup" 
-                                       FontSize="14" 
-                                       TextWrapping="Wrap" 
-                                       Margin="10"/>
-                        </StackPanel>
-                    </Border>
+                        <Border Grid.Row="3" Grid.Column="1" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
-                </WrapPanel>
+                        <Border Grid.Row="3" Grid.Column="2" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
 
+                        <Border Grid.Row="3" Grid.Column="3" Margin="10" 
+                                CornerRadius="10" 
+                                Background="White" 
+                                Padding="10" 
+                                Width="170" 
+                                Height="230">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\amok.png" 
+                                       Width="150" 
+                                       Height="150" 
+                                       Margin="0,0,0,5"/>
+                                <TextBlock Text="Amok" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center"/>
+                                <TextBlock Text="Need 3 Ingredients" 
+                                           FontSize="14" 
+                                           Foreground="Gray" 
+                                           TextAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                    </Grid>
+                </ScrollViewer>
             </StackPanel>
-
         </StackPanel>
-
     </Grid>
-
 </UserControl>
