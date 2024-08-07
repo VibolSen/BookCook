@@ -28,7 +28,9 @@ namespace CookBook.BookMenu
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             // Navigate directly to the home page (MainPage)
-            NavigationService.Navigate(new Home());
+            Home homeWindow = new Home();
+            //homeWindow.Show();
+            this.Close();
         }
     }
 }

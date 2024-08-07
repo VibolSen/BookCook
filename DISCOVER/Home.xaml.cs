@@ -34,8 +34,8 @@ namespace CookBook
 
         private void AMok(object sender, System.Windows.RoutedEventArgs e)
         {
-            AMok amokPage = new AMok();
-            NavigationService.Navigate(amokPage);
+            AMok amokWindow = new AMok();
+            amokWindow.Show();
         }
     }
 }
