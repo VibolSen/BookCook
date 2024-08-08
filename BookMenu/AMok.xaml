@@ -53,33 +53,7 @@
                            Width="200"
                            HorizontalAlignment="Right"/>
 
-                    <StackPanel Orientation="Vertical" 
-                                Margin="20,20,0,0"
-                                HorizontalAlignment="Right">
-                        <StackPanel Margin="10">
-                            <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\profile.png" 
-                                   Height="20"/>
-                            <TextBlock Text="Serving Size" 
-                                       FontSize="12" 
-                                       TextAlignment="Center"/>
-                        </StackPanel>
-
-                        <StackPanel Margin="10">
-                            <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\eating.png" 
-                                   Height="20"/>
-                            <TextBlock Text="Prep Time" 
-                                       FontSize="12" 
-                                       TextAlignment="Center"/>
-                        </StackPanel>
-
-                        <StackPanel Margin="10">
-                            <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\watch.png" 
-                                   Height="20"/>
-                            <TextBlock Text="Cook Time" 
-                                       FontSize="12" 
-                                       TextAlignment="Center"/>
-                        </StackPanel>
-                    </StackPanel>
+                    
                 </StackPanel>
 
                 <StackPanel Margin="30,0,10,10" 
@@ -117,7 +91,7 @@
                        Margin="0,0,0,20"/>
 
             <StackPanel Margin="30,0,10,10" 
-                        Width="215"
+                        Width="268"
                         HorizontalAlignment="Left">
                 <TextBlock Text="Ingredients"
                            FontWeight="Bold"
@@ -126,22 +100,22 @@
                            HorizontalAlignment="Left"
                            Margin="10,0,0,10"/>
 
-                <TextBlock Text="Fresh boneless fish fillet              120 g"/>
-                <TextBlock Text="Coconut milk                                50 ml"/>
-                <TextBlock Text="Water                                            30 ml"/>
-                <TextBlock Text="Carrot                                           20 g"/>
-                <TextBlock Text="Cabbage                                       20 g"/>
-                <TextBlock Text="Kale (destemmed)                        20 g"/>
-                <TextBlock Text="Mushrooms (preferably oyster)   10 g"/>
-                <TextBlock Text="1 tsp Oyster sauce*"/>
-                <TextBlock Text="2 Noni leaves*"/>
+                <TextBlock Text="Fresh boneless fish fillet                 120 g"/>
+                <TextBlock Text="Coconut milk                                   50 ml"/>
+                <TextBlock Text="Water                                               30 ml"/>
+                <TextBlock Text="Carrot                                               20 g"/>
+                <TextBlock Text="Cabbage                                           20 g"/>
+                <TextBlock Text="Kale (destemmed)                            20 g"/>
+                <TextBlock Text="Mushrooms (preferably oyster)       10 g"/>
+                <TextBlock Text="Oyster sauce*                                  1 tsp"/>
+                <TextBlock Text="Noni leaves*                                    2"/>
                 <TextBlock Text="Egg, beaten"/>
-                <TextBlock Text="1 tsp Fish sauce*"/>
-                <TextBlock Text="1 tps Chicken broth"/>
-                <TextBlock Text="1 tsp oil"/>
-                <TextBlock Text="1/2 tsp Shrimp paste*"/>
-                <TextBlock Text="1 tsp Sugar"/>
-                <TextBlock Text="2 tsp Amok paste (recipe follows)"/>
+                <TextBlock Text="Fish sauce*                                      1 tsp"/>
+                <TextBlock Text="Chicken broth                                 1 tps"/>
+                <TextBlock Text="Oil                                                   1 tps"/>
+                <TextBlock Text="Shrimp paste*                                 1/2 tsp"/>
+                <TextBlock Text="Sugar                                              1 tsp "/>
+                <TextBlock Text="Amok paste (recipe follows)           2 tsp "/>
                 <TextBlock Text="Banana leaves for serving*"/>
             </StackPanel>
 
