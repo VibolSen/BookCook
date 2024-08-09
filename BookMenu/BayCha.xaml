@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="BayCha" Height="450" Width="800">
     <Grid>
-        
+
+        <Image Source="C:\Users\ASUS.LAPTOP-AJL0QBUI\source\repos\BookCook\Image\image 1.png"/>
+
     </Grid>
 </Window>
