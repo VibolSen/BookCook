@@ -1,6 +1,7 @@
 ﻿using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Navigation;
+using BookCook.BookMenu;
 using CookBook.BookMenu;
 
 namespace CookBook
@@ -40,8 +41,21 @@ namespace CookBook
 
         private void SamlorKorkor(object sender, System.Windows.RoutedEventArgs e)
         {
-            AMok amokWindow = new AMok();
-            amokWindow.Show();
+            SamlorKorkor samlorkorkorWindow = new SamlorKorkor();
+            samlorkorkorWindow.Show(); 
         }
+
+        private void KuyTeav(object sender, System.Windows.RoutedEventArgs e)
+        {
+            KuyTeav kuyteave = new KuyTeav();
+            kuyteave.Show();
+        }
+
+        private void NomBanhChok(object sender, System.Windows.RoutedEventArgs e)
+        {
+            NomBanhChok nomBanhChok = new NomBanhChok();
+            nomBanhChok.Show();
+        }
+
     }
 }

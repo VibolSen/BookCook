@@ -1,0 +1,45 @@
+﻿<Window x:Class="BookCook.BookMenu.NomBanhChok"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookCook.BookMenu"
+        mc:Ignorable="d"
+        Title="NomBanhChok" 
+        Height="600" Width="1015">
+    <Grid>
+        <!-- Image Section -->
+        <Image Source="D:\1_STEP Acadermy\Project\WinForm(WPF)\BookCook\Image\Food\Authentic-Nom-Banh-Chok-Recipe.jpg" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top" 
+               Width="300" 
+               Margin="20,20,0,0"/>
+
+        <!-- Title Section -->
+        <TextBlock Text="Nom Banh Chok (Khmer Nodle)" 
+                   FontSize="24" 
+                   FontWeight="Bold" 
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   Margin="340,20,0,0" 
+                   Foreground="Black"/>
+
+        <!-- Additional Content (e.g., ingredients, description) -->
+        <StackPanel Orientation="Vertical" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="340,60,0,0">
+            <TextBlock Text="Ingredients:" 
+                       FontSize="18" 
+                       FontWeight="Bold" 
+                       Foreground="Black"/>
+            <TextBlock Text="• Ingredient 1" 
+                       FontSize="16" 
+                       Foreground="DarkGray"/>
+            <TextBlock Text="• Ingredient 2" 
+                       FontSize="16" 
+                       Foreground="DarkGray"/>
+            <!-- Add more ingredients as needed -->
+        </StackPanel>
+    </Grid>
+</Window>
